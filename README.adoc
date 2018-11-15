@@ -33,8 +33,8 @@ By default, the extension provides a JavaScript and CSS file that already takes 
 
 |===
 |Attribute              |Default Value          |Description
-|`tabbed-code-js-path`  |`/codeBlockSwitch.js`  |The JavaScript controlling the behavior read from the runtime classpath.
-|`tabbed-code-css-path` |`/codeBlockSwitch.css` |The CSS controlling the styling read from the runtime classpath.
+|`tabbed-code-js-path`  |https://github.com/bmuschko/asciidoctorj-tabbed-code-extension/blob/master/src/main/resources/codeBlockSwitch.js[`/codeBlockSwitch.js`] |The JavaScript controlling the behavior read from the runtime classpath.
+|`tabbed-code-css-path` |https://github.com/bmuschko/asciidoctorj-tabbed-code-extension/blob/master/src/main/resources/codeBlockSwitch.css[`/codeBlockSwitch.css`] |The CSS controlling the styling read from the runtime classpath.
 |===
 
 The following example shows how to use the CSS attributes to provide custom styling in a Gradle build using the Kotlin DSL.
