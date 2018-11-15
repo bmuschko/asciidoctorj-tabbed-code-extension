@@ -7,6 +7,7 @@ This AsciidoctorJ extension can render code on multiple tabs. The functionality 
 All you need to do to use the extension is to add it to the https://bintray.com/bmuschko/maven/asciidoctorj-tabbed-code-extension[dependency from JCenter]. The following two example demonstrate the use of version 0.1 from Maven and Gradle.
 
 .Maven
+[source,xml]
 ----
 <dependency>
     <groupId>com.bmuschko</groupId>
@@ -16,6 +17,7 @@ All you need to do to use the extension is to add it to the https://bintray.com/
 ----
 
 .Gradle
+[source,groovy]
 ----
 dependencies {
     compile 'com.bmuschko:asciidoctorj-tabbed-code-extension:0.1'
@@ -24,6 +26,35 @@ dependencies {
 
 [IMPORTANT]
 This extension is based on AsciidoctorJ version 1.6.0-RC1. Make sure that the consuming project uses that exact version to avoid incompatibilities. The alpha versions 1.6.0 of AsciidoctorJ are not compatible.
+
+To use the extension in Asciidoc provide code blocks with different roles. The extension uses the title of the code block for rendering the tab label.
+
+[source]
+....
+[source,groovy,indent=0,subs="verbatim,attributes",role="primary"]
+.Groovy
+----
+docker {
+    registryCredentials {
+        url = 'https://gcr.io'
+        username = '_json_key'
+        password = file('keyfile.json').text
+    }
+}
+----
+
+[source,kotlin,indent=0,subs="verbatim,attributes",role="secondary"]
+.Kotlin
+----
+docker {
+    registryCredentials {
+        url.set("https://gcr.io")
+        username.set("_json_key")
+        password.set(file("keyfile.json").readText())
+    }
+}
+----
+....
 
 == Configuring the extension
 
@@ -40,6 +71,7 @@ By default, the extension provides a JavaScript and CSS file that already takes 
 The following example shows how to use the CSS attributes to provide custom styling in a Gradle build using the Kotlin DSL.
 
 .build.gradle.kts
+[source,kotlin]
 ----
 tasks.named<AsciidoctorTask>("asciidoctor") {
     sourceDir = file("src/docs/asciidoc")
