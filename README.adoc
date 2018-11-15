@@ -2,8 +2,16 @@
 
 This AsciidoctorJ extension can render code on multiple tabs. The functionality is particularly useful if you want to demonstrate a code example in different languages or tools, as shown in the following two images.
 
-image::images/tabbed-code-groovy.png[Groovy tab]
-image::images/tabbed-code-kotlin.png[Kotlin tab]
+[.float-group]
+--
+[.left]
+.Groovy tab
+image::images/tabbed-code-groovy.png[Groovy tab,300]
+
+[.right]
+.Kotlin tab
+image::images/tabbed-code-kotlin.png[Kotlin tab,300]
+--
 
 == Using the extension
 
