@@ -14,22 +14,18 @@ public class TabbedCodeBlockDocinfoProcessor extends DocinfoProcessor {
     private static final String TABBED_CODE_CSS_FILE_PATH = "tabbed-code-css-path";
     private static final String TABBED_CODE_JS_FILE_PATH = "tabbed-code-js-path";
 
-    public TabbedCodeBlockDocinfoProcessor() {
-        super();
-    }
-
-    public TabbedCodeBlockDocinfoProcessor(Map<String, Object> config) {
-        super(config);
-    }
-
     @Override
     public String process(Document document) {
-        Map<String, Object> attributes = document.getAttributes();
-        URL cssURL = getURLForResource(getCssPath(attributes, TABBED_CODE_CSS_FILE_PATH, "/codeBlockSwitch.css"));
-        URL javascriptURL = getURLForResource(getCssPath(attributes, TABBED_CODE_JS_FILE_PATH, "/codeBlockSwitch.js"));
-        String css = readText(cssURL);
-        String javascript = readText(javascriptURL);
-        return modifyHeadHtml(css, javascript);
+        if (document.isBasebackend("html")) {
+            Map<String, Object> attributes = document.getAttributes();
+            URL cssURL = getURLForResource(getCssPath(attributes, TABBED_CODE_CSS_FILE_PATH, "/codeBlockSwitch.css"));
+            URL javascriptURL = getURLForResource(getCssPath(attributes, TABBED_CODE_JS_FILE_PATH, "/codeBlockSwitch.js"));
+            String css = readText(cssURL);
+            String javascript = readText(javascriptURL);
+            return modifyHeadHtml(css, javascript);
+        }
+
+        return null;
     }
 
     private String getCssPath(Map<String, Object> attributes, String attributeKey, String defaultPath) {
