@@ -19,6 +19,7 @@ repositories {
 dependencies {
     compileOnly("org.asciidoctor:asciidoctorj:1.6.0-RC.1")
     testImplementation("org.asciidoctor:asciidoctorj:1.6.0-RC.1")
+    testImplementation("org.jsoup:jsoup:1.11.3")
     val junitJupiterVersion = "5.3.1"
     testImplementation("org.junit.jupiter:junit-jupiter-api:$junitJupiterVersion")
     testImplementation("org.junit.jupiter:junit-jupiter-params:$junitJupiterVersion")
