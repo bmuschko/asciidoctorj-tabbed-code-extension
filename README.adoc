@@ -1,4 +1,4 @@
-= AsciidoctorJ tabbed code extension
+= AsciidoctorJ tabbed code extension image:https://travis-ci.org/bmuschko/asciidoctorj-tabbed-code-extension.svg?branch=master["Build Status", link="https://travis-ci.org/bmuschko/asciidoctorj-tabbed-code-extension"]
 
 This AsciidoctorJ extension can render code on multiple tabs. The functionality is particularly useful if you want to demonstrate a code example in different languages or tools, as shown in the following two images.
 
