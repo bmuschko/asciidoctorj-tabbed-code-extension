@@ -9,7 +9,7 @@ image::images/tabbed-code-kotlin.png[Kotlin tab,500]
 
 All you need to do to use the extension is to add it to the https://bintray.com/bmuschko/maven/asciidoctorj-tabbed-code-extension[dependency from JCenter]. The following two example demonstrate the use of version 0.1 from Maven and Gradle.
 
-.Maven
+.pom.xml
 [source,xml]
 ----
 <dependency>
@@ -20,11 +20,11 @@ All you need to do to use the extension is to add it to the https://bintray.com/
 </dependency>
 ----
 
-.Gradle
+.build.gradle.kts
 [source,groovy]
 ----
 dependencies {
-    runtimeOnly 'com.bmuschko:asciidoctorj-tabbed-code-extension:0.1'
+    runtimeOnly("com.bmuschko:asciidoctorj-tabbed-code-extension:0.1")
 }
 ----
 
