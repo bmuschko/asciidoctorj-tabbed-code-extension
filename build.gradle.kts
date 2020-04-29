@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.bmuschko"
-version = "0.2"
+version = "0.3-SNAPSHOT"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
@@ -17,8 +17,8 @@ repositories {
 }
 
 dependencies {
-    compileOnly("org.asciidoctor:asciidoctorj:1.6.0")
-    testImplementation("org.asciidoctor:asciidoctorj:1.6.0")
+    compileOnly("org.asciidoctor:asciidoctorj:2.2.0")
+    testImplementation("org.asciidoctor:asciidoctorj:2.2.0")
     testImplementation("org.jsoup:jsoup:1.11.3")
     val junitJupiterVersion = "5.3.1"
     testImplementation("org.junit.jupiter:junit-jupiter-api:$junitJupiterVersion")

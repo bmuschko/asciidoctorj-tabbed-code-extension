@@ -15,7 +15,7 @@ All you need to do to use the extension is to add it to the https://bintray.com/
 <dependency>
     <groupId>com.bmuschko</groupId>
     <artifactId>asciidoctorj-tabbed-code-extension</artifactId>
-    <version>0.1</version>
+    <version>0.2</version>
     <scope>runtime</scope>
 </dependency>
 ----
@@ -24,7 +24,7 @@ All you need to do to use the extension is to add it to the https://bintray.com/
 [source,groovy]
 ----
 dependencies {
-    runtimeOnly("com.bmuschko:asciidoctorj-tabbed-code-extension:0.1")
+    runtimeOnly("com.bmuschko:asciidoctorj-tabbed-code-extension:0.2")
 }
 ----
 
