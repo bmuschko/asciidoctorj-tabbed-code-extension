@@ -63,7 +63,7 @@ public class TabbedCodeBlockDocinfoProcessorTest {
     @Test
     @DisplayName("can handle other backends than HTML")
     void canHandleNonHtmlBackend() {
-        OptionsBuilder optionsBuilder = createOptionBuilder().backend("docbook45");
+        OptionsBuilder optionsBuilder = createOptionBuilder().backend("docbook");
         String result = convert(optionsBuilder);
         assertNotNull(result);
     }
