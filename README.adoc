@@ -15,7 +15,7 @@ All you need to do to use the extension is to add it to the https://bintray.com/
 <dependency>
     <groupId>com.bmuschko</groupId>
     <artifactId>asciidoctorj-tabbed-code-extension</artifactId>
-    <version>0.2</version>
+    <version>0.3</version>
     <scope>runtime</scope>
 </dependency>
 ----
@@ -24,12 +24,13 @@ All you need to do to use the extension is to add it to the https://bintray.com/
 [source,groovy]
 ----
 dependencies {
-    runtimeOnly("com.bmuschko:asciidoctorj-tabbed-code-extension:0.2")
+    runtimeOnly("com.bmuschko:asciidoctorj-tabbed-code-extension:0.3")
 }
 ----
 
 [IMPORTANT]
-This extension is based on AsciidoctorJ version 1.6.0-RC1. Make sure that the consuming project uses that exact version to avoid incompatibilities. The alpha versions 1.6.0 of AsciidoctorJ are not compatible.
+This extension is based on AsciidoctorJ version 2.0.0. Make sure that the consuming project uses that exact version (or greater) to avoid incompatibilities.
+If you need a version compatible with an older version of AsciidoctorJ (down to 1.6.0-RC1) then use version `0.2` of this extension.
 
 To use the extension in Asciidoc provide code blocks with different roles. The extension uses the title of the code block for rendering the tab label.
 

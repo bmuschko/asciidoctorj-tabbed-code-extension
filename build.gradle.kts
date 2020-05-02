@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.bmuschko"
-version = "0.3-SNAPSHOT"
+version = "0.3"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
