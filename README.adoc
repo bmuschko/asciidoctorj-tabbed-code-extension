@@ -7,7 +7,7 @@ image::images/tabbed-code-kotlin.png[Kotlin tab,500]
 
 == Using the extension
 
-All you need to do to use the extension is to add it to the https://bintray.com/bmuschko/maven/asciidoctorj-tabbed-code-extension[dependency from JCenter]. The following two example demonstrate the use of version 0.1 from Maven and Gradle.
+All you need to do to use the extension is to add it to the https://bintray.com/bmuschko/maven/asciidoctorj-tabbed-code-extension[dependency from JCenter]. The following two examples demonstrate the use of version 0.3 from Maven and Gradle.
 
 .pom.xml
 [source,xml]
@@ -32,7 +32,7 @@ dependencies {
 This extension is based on AsciidoctorJ version 2.0.0. Make sure that the consuming project uses that exact version (or greater) to avoid incompatibilities.
 If you need a version compatible with an older version of AsciidoctorJ (down to 1.6.0-RC1) then use version `0.2` of this extension.
 
-To use the extension in Asciidoc provide code blocks with different roles. The extension uses the title of the code block for rendering the tab label.
+To use the extension in Asciidoc provide code blocks with different roles. Specify the `primary` role for the code block that should appear in the first, topmost tab to the left and use the `secondary` role for all other tabs. The extension uses the title of the code block for rendering the tab label.
 
 [source]
 ....
