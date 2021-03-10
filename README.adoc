@@ -7,7 +7,7 @@ image::images/tabbed-code-kotlin.png[Kotlin tab,500]
 
 == Using the extension
 
-All you need to do to use the extension is to add it to the https://bintray.com/bmuschko/maven/asciidoctorj-tabbed-code-extension[dependency from JCenter]. The following two examples demonstrate the use of version 0.3 from Maven and Gradle.
+All you need to do to use the extension is to add it to the link:https://repo1.maven.org/maven2/com/bmuschko/asciidoctorj-tabbed-code-extension/[dependency from Maven Central]. The following two examples demonstrate the use of version 0.3 from Maven and Gradle.
 
 .pom.xml
 [source,xml]
@@ -98,5 +98,3 @@ tasks.named<AsciidoctorTask>("asciidoctor") {
     )
 }
 ----
-
-
